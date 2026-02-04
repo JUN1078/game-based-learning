@@ -68,7 +68,7 @@ export default function LevelBuilder() {
 
   const handleEditLevel = (level: Level) => {
     setSelectedLevel(level)
-    setShowLevelEditor(true)
+    _setShowLevelEditor(true)
   }
 
   const handleAddChallenge = (level: Level) => {

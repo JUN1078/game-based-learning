@@ -39,7 +39,7 @@ export class EndlessRunScene extends Phaser.Scene {
     this.createClouds()
 
     // Ground
-    this.ground = this.add.rectangle(width / 2, height - 30, width, 60, 0x8B4513)
+    this._ground = this.add.rectangle(width / 2, height - 30, width, 60, 0x8B4513)
 
     // Player (character)
     this.player = this.add.rectangle(
