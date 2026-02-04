@@ -36,11 +36,11 @@ import { AuthModule } from './modules/auth/auth.module';
         // Development: Use individual connection params
         return {
           type: 'postgres' as const,
-          host: configService.get('DB_HOST'),
-          port: +configService.get('DB_PORT'),
-          username: configService.get('DB_USERNAME'),
-          password: configService.get('DB_PASSWORD'),
-          database: configService.get('DB_DATABASE'),
+          host: configService.get<string>('DB_HOST'),
+          port: +configService.get<string>('DB_PORT'),
+          username: configService.get<string>('DB_USERNAME'),
+          password: configService.get<string>('DB_PASSWORD'),
+          database: configService.get<string>('DB_DATABASE'),
           entities: [__dirname + '/**/*.entity{.ts,.js}'],
           synchronize: configService.get('NODE_ENV') === 'development',
           logging: configService.get('NODE_ENV') === 'development',
