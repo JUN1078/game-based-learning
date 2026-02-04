@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { CheckCircle2, XCircle } from 'lucide-react'
 import { Button } from '@components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/Card'
-import { Challenge } from '@types/index'
+import { Challenge } from '@/types'
 import { cn } from '@utils/cn'
 
 interface QuizChallengeProps {

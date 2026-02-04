@@ -173,6 +173,7 @@ export interface AIGenerationRequest {
   topic?: string
   difficulty?: string
   imageUrl?: string
+  count?: number
   options?: {
     temperature?: number
     maxTokens?: number

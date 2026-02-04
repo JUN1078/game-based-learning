@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { Game, Level, Challenge, GameAttempt } from '@types/index'
+import { Game, Level, Challenge, GameAttempt } from '@/types'
 
 interface GameState {
   // Current game data

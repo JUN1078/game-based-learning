@@ -5,7 +5,7 @@ import { Play, Trophy, User, Clock } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@components/ui/Card'
 import { Button } from '@components/ui/Button'
 import { gameApi } from '@services/api'
-import { Game } from '@types/index'
+import { Game } from '@/types'
 import toast from 'react-hot-toast'
 
 export default function PlayerHome() {

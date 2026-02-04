@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/Card'
-import { Challenge } from '@types/index'
+import { Challenge } from '@/types'
 
 interface TextChallengeProps {
   challenge: Challenge

@@ -9,7 +9,7 @@ import {
   signInWithPopup,
   User as FirebaseUser,
 } from 'firebase/auth'
-import { User } from '@types/index'
+import { User } from '@/types'
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,

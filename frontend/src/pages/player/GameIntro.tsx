@@ -5,7 +5,7 @@ import { Play, ArrowLeft, Target } from 'lucide-react'
 import { Button } from '@components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/Card'
 import { gameApi, attemptApi } from '@services/api'
-import { Game } from '@types/index'
+import { Game } from '@/types'
 import { useGameStore } from '@store/gameStore'
 import toast from 'react-hot-toast'
 

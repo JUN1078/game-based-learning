@@ -5,7 +5,7 @@ import { Plus, Edit, Trash2, Copy, Eye, BarChart3 } from 'lucide-react'
 import { Button } from '@components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/Card'
 import { gameApi } from '@services/api'
-import { Game } from '@types/index'
+import { Game } from '@/types'
 import toast from 'react-hot-toast'
 
 export default function AdminDashboard() {

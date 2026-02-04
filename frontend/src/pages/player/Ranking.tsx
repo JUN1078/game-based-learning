@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowLeft, Trophy, Medal } from 'lucide-react'
 import { Button } from '@components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/Card'
-import { LeaderboardEntry } from '@types/index'
+import { LeaderboardEntry } from '@/types'
 
 export default function Ranking() {
   const navigate = useNavigate()

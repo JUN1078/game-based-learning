@@ -6,7 +6,7 @@ import { Button } from '@components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/Card'
 import { Progress } from '@components/ui/Progress'
 import { levelApi, attemptApi } from '@services/api'
-import { Level, Challenge } from '@types/index'
+import { Level, Challenge } from '@/types'
 import { useGameStore } from '@store/gameStore'
 import toast from 'react-hot-toast'
 

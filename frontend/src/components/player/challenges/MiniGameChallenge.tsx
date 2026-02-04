@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Play, X } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/Card'
 import { Button } from '@components/ui/Button'
-import { Challenge } from '@types/index'
+import { Challenge } from '@/types'
 import PhaserGame, { PhaserGameRef } from '@games/PhaserGame'
 import { EndlessRunScene, EndlessRunConfig } from '@games/endless-run/EndlessRunScene'
 

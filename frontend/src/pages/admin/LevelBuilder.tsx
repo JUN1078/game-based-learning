@@ -5,7 +5,7 @@ import { Button } from '@components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/Card'
 import QuestionEditor from '@components/admin/QuestionEditor'
 import { levelApi, challengeApi } from '@services/api'
-import { Level, Challenge } from '@types/index'
+import { Level, Challenge } from '@/types'
 import toast from 'react-hot-toast'
 import { motion, AnimatePresence } from 'framer-motion'
 
