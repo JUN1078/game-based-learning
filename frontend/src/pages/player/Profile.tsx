@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, User, Trophy, Clock, Target } from 'lucide-react'

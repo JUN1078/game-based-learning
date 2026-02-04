@@ -169,7 +169,7 @@ export interface Asset {
 // AI Generation Request
 export interface AIGenerationRequest {
   type: 'question' | 'character' | 'background' | 'icon'
-  prompt: string
+  prompt?: string
   topic?: string
   difficulty?: string
   imageUrl?: string

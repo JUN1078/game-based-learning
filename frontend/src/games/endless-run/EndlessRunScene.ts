@@ -20,7 +20,7 @@ export class EndlessRunScene extends Phaser.Scene {
   private config: EndlessRunConfig
   private questionCounter: number = 0
   private cursors!: Phaser.Types.Input.Keyboard.CursorKeys
-  private ground!: Phaser.GameObjects.Rectangle
+  private _ground!: Phaser.GameObjects.Rectangle
   private clouds: Phaser.GameObjects.Ellipse[] = []
 
   constructor(config: EndlessRunConfig = {}) {

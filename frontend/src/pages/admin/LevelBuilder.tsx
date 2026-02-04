@@ -15,7 +15,7 @@ export default function LevelBuilder() {
   const [levels, setLevels] = useState<Level[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [selectedLevel, setSelectedLevel] = useState<Level | null>(null)
-  const [showLevelEditor, setShowLevelEditor] = useState(false)
+  const [_showLevelEditor, _setShowLevelEditor] = useState(false)
   const [showChallengeEditor, setShowChallengeEditor] = useState(false)
   const [editingChallenge, setEditingChallenge] = useState<Partial<Challenge> | null>(null)
 
@@ -336,7 +336,7 @@ export default function LevelBuilder() {
                       onChange={(e) =>
                         setEditingChallenge({
                           ...editingChallenge,
-                          config: { ...editingChallenge.config, gameType: e.target.value },
+                          config: { ...editingChallenge.config, gameType: e.target.value as 'endless-run' | 'match3' | 'memory-flip' | 'toon' | 'puzzle-grid' },
                         })
                       }
                       className="w-full px-4 py-2 rounded-lg border"

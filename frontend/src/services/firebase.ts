@@ -45,7 +45,7 @@ export const firebaseAuth = {
   },
 
   // Sign up with email/password
-  signUp: async (email: string, password: string, displayName: string) => {
+  signUp: async (email: string, password: string, _displayName: string) => {
     const result = await createUserWithEmailAndPassword(auth, email, password)
     // TODO: Update display name
     return mapFirebaseUser(result.user)
