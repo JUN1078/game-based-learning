@@ -29,7 +29,7 @@ import { HealthController } from './health.controller';
             type: 'postgres' as const,
             url: databaseUrl,
             entities: [__dirname + '/**/*.entity{.ts,.js}'],
-            synchronize: configService.get('NODE_ENV') === 'development',
+            synchronize: true, // Enable auto-creation of database tables
             logging: configService.get('NODE_ENV') === 'development',
             ssl: configService.get('NODE_ENV') === 'production' ? { rejectUnauthorized: false } : false,
           };
