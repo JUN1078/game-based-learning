@@ -50,7 +50,7 @@ export class GameAttempt {
   @CreateDateColumn()
   startedAt: Date;
 
-  @Column({ nullable: true })
+  @Column({ type: 'datetime', nullable: true })
   completedAt: Date;
 
   @UpdateDateColumn()

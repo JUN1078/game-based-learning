@@ -57,7 +57,7 @@ export default function PlayerHome() {
               className="flex items-center space-x-2"
             >
               <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500" />
-              <h1 className="text-2xl font-bold">LearnQuest Studio</h1>
+              <h1 className="text-2xl font-bold">EnergyOS</h1>
             </motion.div>
 
             <div className="flex items-center space-x-4">

@@ -18,12 +18,20 @@ export class FirebaseStrategy extends PassportStrategy(Strategy, 'firebase-jwt')
     });
 
     // Initialize Firebase Admin
+    const projectId = configService.get('FIREBASE_PROJECT_ID');
+    const clientEmail = configService.get('FIREBASE_CLIENT_EMAIL');
+    const privateKey = configService.get('FIREBASE_PRIVATE_KEY');
+
+    if (!projectId || !clientEmail || !privateKey) {
+      return;
+    }
+
     if (!admin.apps.length) {
       this.defaultApp = admin.initializeApp({
         credential: admin.credential.cert({
-          projectId: configService.get('FIREBASE_PROJECT_ID'),
-          clientEmail: configService.get('FIREBASE_CLIENT_EMAIL'),
-          privateKey: configService.get('FIREBASE_PRIVATE_KEY')?.replace(/\\n/g, '\n'),
+          projectId,
+          clientEmail,
+          privateKey: privateKey?.replace(/\\n/g, '\n'),
         }),
       });
     } else {
@@ -33,6 +41,9 @@ export class FirebaseStrategy extends PassportStrategy(Strategy, 'firebase-jwt')
 
   async validate(token: string) {
     try {
+      if (!this.defaultApp) {
+        throw new UnauthorizedException('Firebase not configured');
+      }
       const decodedToken = await admin.auth().verifyIdToken(token);
       const user = await this.authService.validateUser(
         decodedToken.uid,

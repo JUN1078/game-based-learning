@@ -22,7 +22,7 @@ export class Level {
   @JoinColumn({ name: 'gameId' })
   game: Game;
 
-  @Column({ type: 'int' })
+  @Column({ type: 'int', name: 'level_order' })
   order: number;
 
   @Column()

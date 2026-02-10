@@ -5,6 +5,12 @@ export interface User {
   displayName: string
   photoURL?: string
   role: 'player' | 'admin'
+  gender?: string
+  dateOfBirth?: string
+  heightCm?: number
+  weightKg?: number
+  goal?: string
+  preferredUnits?: 'metric' | 'imperial'
   createdAt: Date
 }
 
@@ -178,5 +184,74 @@ export interface AIGenerationRequest {
     temperature?: number
     maxTokens?: number
     model?: string
+  }
+}
+
+// Energy Management Types
+export interface FoodLog {
+  id: string
+  foodName: string
+  portion?: string
+  calories: number
+  protein: number
+  carbs: number
+  fat: number
+  confidenceScore: number
+  createdAt: Date
+}
+
+export interface InBodyReport {
+  id: string
+  weight: number
+  skeletalMuscleMass?: number
+  bodyFatMass?: number
+  bodyFatPercent?: number
+  fatFreeMass?: number
+  totalBodyWater?: number
+  bmr?: number
+  visceralFat?: number
+  ecwRatio?: number
+  createdAt: Date
+}
+
+export interface CorosUpload {
+  id: string
+  activeCalories: number
+  trainingLoad?: number
+  durationMinutes?: number
+  avgHr?: number
+  maxHr?: number
+  recoveryStatus?: string
+  createdAt: Date
+}
+
+export interface DailyEnergySummary {
+  date: string
+  bmr: number
+  activeCalories: number
+  neatAdjustment: number
+  recoveryModifier: number
+  dailyEnergyNeed: number
+  caloriesEaten: number
+  macros: {
+    protein: number
+    fat: number
+    carbs: number
+  }
+  coaching?: {
+    summary: string
+    warning?: string | null
+  }
+}
+
+export interface WeeklyEnergySummary {
+  startDate: string
+  endDate: string
+  averageEnergyNeed: number
+  averageCaloriesEaten: number
+  days: DailyEnergySummary[]
+  coaching?: {
+    summary: string
+    warning?: string | null
   }
 }

@@ -43,7 +43,7 @@ export default function AdminLogin() {
           <CardHeader>
             <div className="flex items-center space-x-2 mb-4">
               <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500" />
-              <span className="text-xl font-bold">LearnQuest Studio</span>
+              <span className="text-xl font-bold">EnergyOS</span>
             </div>
             <CardTitle className="text-2xl">Admin Login</CardTitle>
           </CardHeader>

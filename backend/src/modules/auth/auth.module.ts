@@ -7,11 +7,12 @@ import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { User } from '../../entities/user.entity';
 import { FirebaseStrategy } from './firebase.strategy';
+import { JwtStrategy } from './jwt.strategy';
 
 @Module({
   imports: [
     TypeOrmModule.forFeature([User]),
-    PassportModule.register({ defaultStrategy: 'firebase-jwt' }),
+    PassportModule.register({ defaultStrategy: 'jwt' }),
     JwtModule.registerAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
@@ -22,7 +23,7 @@ import { FirebaseStrategy } from './firebase.strategy';
     }),
   ],
   controllers: [AuthController],
-  providers: [AuthService, FirebaseStrategy],
+  providers: [AuthService, FirebaseStrategy, JwtStrategy],
   exports: [AuthService],
 })
 export class AuthModule {}

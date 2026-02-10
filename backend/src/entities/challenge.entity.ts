@@ -23,10 +23,10 @@ export class Challenge {
   @Column()
   type: string;
 
-  @Column({ type: 'int' })
+  @Column({ type: 'int', name: 'challenge_order' })
   order: number;
 
-  @Column('jsonb')
+  @Column({ type: 'json' })
   config: any;
 
   @Column({ type: 'int', default: 100 })
